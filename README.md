@@ -10,7 +10,7 @@
 ## 安装流程
 ### 安装docker
 ```bash
-./install_docker.sh || (echo "install failed!" && exit 1)
+./install_docker.sh || echo "install failed!"
 ```
 ### 挂载ossbucket
 根据自身实例设置以下参数后执行命令
@@ -19,7 +19,7 @@ export AliyunAK="<your ak>"
 export AliyunSK="<your sk>"
 export AliyunOssEndpoint="<oss bucket endpoint>"
 export AliyunOssBucket="<oss bucket>"
-./mount_oss.sh || (echo "mount oss failed" && exit 1)
+./mount_oss.sh || echo "mount oss failed"
 
 ## 例如
 # export AliyunAK="Latxxx" 
@@ -36,7 +36,7 @@ export HTTPS_PORT="<https port>"
 export HTTPS_HOST="<https host>"
 export OWNCLOUD_ADMIN_USERNAME="<admin name>"
 export OWNCLOUD_ADMIN_PASSWORD="<admin password>"
-./run_owncloud.sh || (echo "start owncloud server failed" && exit 1)
+./run_owncloud.sh || echo "start owncloud server failed" 
 ## 例如
 # export AliyunOssBucket="my-owncloud-ossbucket"
 # export HTTPS_PORT="443"
